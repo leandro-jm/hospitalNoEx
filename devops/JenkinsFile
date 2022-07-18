@@ -1,0 +1,21 @@
+pipeline {
+    
+    agent any
+    
+    tools {nodejs "node"}
+    
+    environment {
+        PROJECT_NAME = 'app-node'
+    }
+
+    stages {
+        stage('build app') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/leandro-jm/app-blank-node']]])
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+
+    }
+}

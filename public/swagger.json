@@ -24,7 +24,7 @@
 	"info": {
 		"title": "app-blank",
 		"version": "1.0.0",
-		"description": "App template Node, Express, TypeScript e API",
+		"description": "App template Node, Express, TypeScript, DotEnv COnfig, API and Swagger",
 		"license": {
 			"name": "ISC"
 		},
