@@ -22,9 +22,9 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "app-blank",
+		"title": "HospitalNoEx",
 		"version": "1.0.0",
-		"description": "App template Node, Express, TypeScript, DotEnv COnfig, API and Swagger",
+		"description": "API for hospital using Node and Express",
 		"license": {
 			"name": "ISC"
 		},

@@ -1,12 +1,19 @@
 import { Router } from "express";
-import HelloController  from "./useCase/hello/HelloController";
+import HospitalController from "./useCase/hospital/HospitalController";
+import StatusController from "./useCase/status/StatusController";
 
 const router: Router = Router();
 
-//Routes
-router.get("/", (request, response) => {
-     const controller = new HelloController();
-     return response.send(controller.home());
+//Routes Status
+router.get("/status/ping", (request, response) => {
+     const controller = new StatusController();
+     return response.send(controller.ping());
+});
+
+//Routes Hospital
+router.get("/patients", (request, response) => {
+     const controller = new HospitalController();
+     return response.send(controller.patients());
 });
 
 export { router };
